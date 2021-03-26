@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
+:root {
+ /* PRIMARY */
+ --Red: hsl(0, 78%, 62%);
+ --Cyan: hsl(180, 62%, 55%);
+ --Orange: hsl(34, 97%, 64%);
+ --Blue: hsl(212, 86%, 64%);
+/* NEUTRALS  */
+ --VeryDarkBlue: hsl(234, 12%, 34%);
+ --GrayishBlue: hsl(229, 6%, 66%);
+ --VeryLightGray: hsl(0, 0%, 98%);
+} 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--VeryLightGray);
+	font-family: 'Poppins', sans-serif;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 1140px;
+}
+/* header */
+.main-header {
+	margin: 50px auto;
+	max-width: 500px;
+	text-align: center;
+}
+.main-title {
+	margin: 0;
+	font-weight: 200;
+	color: var(--GrayishBlue);
+	
+}
+.main-info {
+	font-weight: 600;
+	color: var(--VeryDarkBlue);
+}
+.main-text {
+	color: var(--GrayishBlue);
+}
+.card {
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+	padding: 30px;
+	margin: 15px;
+	width: 350px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.1);
+	border-radius: 5px;
+	
+}
+.card::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 100%;
+}
+.card-cyan::after {
+	background-color: var(--Cyan);
+}
+.card-red::after {
+	background-color: var(--Red);
+}
+.card-blue::after {
+	background-color: var(--Blue);
+}
+.card-orange::after {
+	background-color: var(--Orange);
+}
+.card-push {
+	transform: translateY(50%);
+}
+.card h2 {
+	margin: 0;
+}
+.card img {
+	display: block;
+	margin-left: auto;
+}
+.card p {
+	font-size: 14px;
+	margin: 15px 0 30px;
+}
